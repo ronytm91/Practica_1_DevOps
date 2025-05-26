@@ -1,0 +1,125 @@
+.community-section {
+    padding-top: 80px;
+    padding-bottom: 60px;
+}
+
+.community-section h2 {
+    font-weight: 700;
+    color: #2c3e50;
+    margin-bottom: 3rem;
+    position: relative;
+    text-align: center;
+}
+
+.community-section h2:after {
+    content: '';
+    display: block;
+    width: 80px;
+    height: 4px;
+    background: #3498db;
+    margin: 15px auto 0;
+    border-radius: 2px;
+}
+
+.community-card {
+    border: none;
+    border-radius: 12px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    height: 100%;
+    background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+}
+
+.community-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.1);
+}
+
+.card-body {
+    padding: 2rem;
+    position: relative;
+}
+
+.card-title {
+    font-weight: 600;
+    color: #2c3e50;
+    margin-bottom: 1.2rem;
+    font-size: 1.25rem;
+}
+
+.card-text {
+    color: #7f8c8d;
+    margin-bottom: 1.8rem;
+    line-height: 1.6;
+}
+
+.btn-community {
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 10px 20px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.btn-community:hover {
+    background-color: #2980b9;
+    color: white;
+    transform: translateY(-2px);
+}
+
+.btn-community:after {
+    content: '\f138';
+    font-family: 'Font Awesome 6 Free';
+    font-weight: 900;
+    margin-left: 8px;
+    transition: all 0.3s ease;
+}
+
+.btn-community:hover:after {
+    transform: translateX(4px);
+}
+
+.community-card:hover .card-title {
+    color: #3498db;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.row > div {
+    animation: fadeInUp 0.6s ease forwards;
+    opacity: 0;
+}
+
+.row > div:nth-child(1) { animation-delay: 0.1s; }
+.row > div:nth-child(2) { animation-delay: 0.2s; }
+.row > div:nth-child(3) { animation-delay: 0.3s; }
+.row > div:nth-child(4) { animation-delay: 0.4s; }
+
+@media (max-width: 768px) {
+    .community-section {
+        padding-top: 20px;
+        padding-bottom: 40px;
+    }
+    
+    .card-body {
+        padding: 1.5rem;
+    }
+    
+    .community-card {
+        margin-bottom: 20px;
+    }
+}
